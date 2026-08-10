@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Deploy via FTP to KingHost
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.KINGHOST_FTP_SERVER }}
           username: ${{ secrets.KINGHOST_FTP_USERNAME }}
@@ -34,3 +34,5 @@ jobs:
           protocol: ftps
           local-dir: ./dist/
           server-dir: ${{ secrets.KINGHOST_FTP_SERVER_DIR }}
+          log-level: verbose
+          dangerous-clean-slate: true
