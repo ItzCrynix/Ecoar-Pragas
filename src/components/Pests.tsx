@@ -3,11 +3,11 @@ import { pests } from '../data/content'
 
 const track = [...pests, ...pests]
 
-function PestCard({ name, icon }: { name: string; icon: string }) {
+function PestCard({ name, image }: { name: string; image: string }) {
   return (
     <div className="flex w-32 flex-none flex-col items-center gap-3 px-4 py-2">
-      <span className="flex h-20 w-20 items-center justify-center rounded-2xl bg-brand-50 text-4xl ring-1 ring-brand-100">
-        {icon}
+      <span className="flex h-20 w-20 items-center justify-center rounded-2xl bg-brand-50 p-3 ring-1 ring-brand-100">
+        <img src={image} alt={name} className="h-full w-full object-contain" />
       </span>
       <span className="text-center text-sm font-medium leading-snug text-brand-900/80">{name}</span>
     </div>
@@ -35,7 +35,7 @@ export default function Pests() {
       <Reveal delay={0.1} className="marquee-row mt-14 overflow-hidden">
         <div className="flex w-max animate-marquee-left">
           {track.map((pest, i) => (
-            <PestCard key={`${pest.name}-${i}`} name={pest.name} icon={pest.icon} />
+            <PestCard key={`${pest.name}-${i}`} name={pest.name} image={pest.image} />
           ))}
         </div>
       </Reveal>

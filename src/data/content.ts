@@ -66,22 +66,22 @@ export const sectors = [
 ]
 
 export const pests = [
-  { name: 'Aranhas', icon: '🕷️' },
-  { name: 'Baratas de esgoto', icon: '🪳' },
-  { name: 'Baratas de cozinha', icon: '🪳' },
-  { name: 'Brocas de madeira', icon: '🪲' },
-  { name: 'Carrapatos', icon: '🕷️' },
-  { name: 'Cupim de madeira seca', icon: '🪲' },
-  { name: 'Cupim de solo', icon: '🪲' },
-  { name: 'Escorpiões', icon: '🦂' },
-  { name: 'Formigas', icon: '🐜' },
-  { name: 'Moscas', icon: '🪰' },
-  { name: 'Mosquitos', icon: '🦟' },
-  { name: 'Percevejos', icon: '🐞' },
-  { name: 'Pombos', icon: '🕊️' },
-  { name: 'Pulgas', icon: '🦟' },
-  { name: 'Ratos', icon: '🐀' },
-  { name: 'Traças', icon: '🦋' },
+  { name: 'Aranhas', image: '/pragas/aranha.fw_-3.png' },
+  { name: 'Baratas de esgoto', image: '/pragas/barata-esgoto.fw_.png' },
+  { name: 'Baratas de cozinha', image: '/pragas/barata-cozinha.fw_.png' },
+  { name: 'Brocas de madeira', image: '/pragas/brocas-madeira.fw_.png' },
+  { name: 'Carrapatos', image: '/pragas/carrapato.fw_.png' },
+  { name: 'Cupim de madeira seca', image: '/pragas/cupim-madeira.fw_.png' },
+  { name: 'Cupim de solo', image: '/pragas/cupim.fw_.png' },
+  { name: 'Escorpiões', image: '/pragas/escorpiao.fw_.png' },
+  { name: 'Formigas', image: '/pragas/formiga.fw_.png' },
+  { name: 'Moscas', image: '/pragas/mosca.fw_.png' },
+  { name: 'Mosquitos', image: '/pragas/mosquito.fw_.png' },
+  { name: 'Percevejos', image: '/pragas/percevejos.fw_.png' },
+  { name: 'Pombos', image: '/pragas/pombos.fw_.png' },
+  { name: 'Pulgas', image: '/pragas/pulgas.fw_.png' },
+  { name: 'Ratos', image: '/pragas/roedores.fw_.png' },
+  { name: 'Traças', image: '/pragas/tracas.fw_.png' },
 ]
 
 export const certifications = [
