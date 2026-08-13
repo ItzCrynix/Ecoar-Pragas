@@ -34,14 +34,3 @@ jobs:
           folder: dist
           branch: deploy
           force: false
-
-      - name: Deploy via FTP to KingHost
-        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
-        with:
-          server: ${{ secrets.KINGHOST_FTP_SERVER }}
-          username: ${{ secrets.KINGHOST_FTP_USERNAME }}
-          password: ${{ secrets.KINGHOST_FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./dist/
-          server-dir: ${{ secrets.KINGHOST_FTP_SERVER_DIR }}
-          log-level: verbose
