@@ -58,20 +58,25 @@ export default function Services() {
           })}
         </div>
 
-        <Reveal delay={0.15} className="mt-14 flex flex-wrap items-center justify-center gap-4 border-t border-white/10 pt-10">
+        <Reveal
+          delay={0.15}
+          className="mt-14 flex flex-col items-center justify-center gap-4 border-t border-white/10 pt-10 sm:flex-row sm:flex-wrap"
+        >
           <span className="text-sm font-medium text-brand-100/60">Atendemos:</span>
-          {sectors.map((sector) => {
-            const Icon = sectorIcons[sector.icon as keyof typeof sectorIcons]
-            return (
-              <span
-                key={sector.title}
-                className="flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-brand-100"
-              >
-                <Icon size={15} />
-                {sector.title}
-              </span>
-            )
-          })}
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            {sectors.map((sector) => {
+              const Icon = sectorIcons[sector.icon as keyof typeof sectorIcons]
+              return (
+                <span
+                  key={sector.title}
+                  className="flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-brand-100"
+                >
+                  <Icon size={15} />
+                  {sector.title}
+                </span>
+              )
+            })}
+          </div>
         </Reveal>
       </div>
     </section>
