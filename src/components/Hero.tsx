@@ -4,7 +4,7 @@ import { company } from '../data/content'
 
 const badges = [
   { icon: BadgeCheck, text: 'Produtos registrados no MS' },
-  { icon: Award, text: 'Certificação SIVISA' },
+  { icon: Award, text: 'Certificação SIVISA', sub: company.sivisa },
 ]
 
 export default function Hero() {
@@ -42,9 +42,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Proteção definitiva contra{' '}
+            Especialistas em Controle de{' '}
             <span className="bg-gradient-to-r from-accent-300 to-brand-300 bg-clip-text text-transparent">
-              pragas urbanas
+              Vetores e Pragas Urbanas
             </span>
           </motion.h1>
 
@@ -54,9 +54,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-brand-100/90"
           >
-            Somos especialistas em controle de pragas, com equipe qualificada e produtos
-            registrados no MS. Criamos um ambiente mais seguro, limpo e ecológico para você,
-            sua família e seus pets.
+            Compromisso com a saúde pública e a sustentabilidade ambiental: soluções corporativas
+            e residenciais em controle de pragas, executadas por profissionais certificados e com
+            produtos homologados pelo MS.
           </motion.p>
 
           <motion.div
@@ -89,10 +89,15 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-12 flex flex-wrap gap-x-8 gap-y-4"
           >
-            {badges.map(({ icon: Icon, text }) => (
+            {badges.map(({ icon: Icon, text, sub }) => (
               <div key={text} className="flex items-center gap-2 text-sm text-brand-100/80">
-                <Icon size={16} className="text-accent-300" />
-                {text}
+                <Icon size={16} className="shrink-0 text-accent-300" />
+                <div>
+                  <span>{text}</span>
+                  {sub && (
+                    <span className="block text-xs text-brand-100/50 lg:hidden">{sub}</span>
+                  )}
+                </div>
               </div>
             ))}
           </motion.div>

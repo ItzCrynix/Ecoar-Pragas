@@ -24,38 +24,57 @@ export const nav = [
 export const values = [
   {
     title: 'Missão',
-    text: 'Prestar um serviço de excelência, construindo relações sólidas e duradouras com cada cliente.',
+    text: 'Prestar serviços com excelência técnica e rigor operacional no controle de pragas, estabelecendo relações sólidas, transparentes e duradouras com cada cliente, fundamentadas na confiança e na segurança ambiental.',
   },
   {
     title: 'Visão',
-    text: 'Ser reconhecida pela comunidade pela qualidade dos nossos serviços e pelo comprometimento da nossa equipe.',
+    text: 'Ser reconhecida como referência em biossegurança e manejo integrado de pragas, destacando-se pela inovação tecnológica, qualificação de nossa equipe e pelo estrito respeito à saúde pública e ao meio ambiente.',
+  },
+]
+
+export const valuesList = [
+  {
+    title: 'Rigor Técnico e Legal',
+    text: 'Atuação em total conformidade com as normas regulamentares do Ministério da Saúde e ANVISA.',
   },
   {
-    title: 'Valores',
-    text: 'Foco no cliente, ética, respeito, justiça, honestidade, responsabilidade ambiental e excelência.',
+    title: 'Sustentabilidade',
+    text: 'Compromisso com práticas ecologicamente corretas que protegem as pessoas, os pets e a natureza.',
+  },
+  {
+    title: 'Integridade e Transparência',
+    text: 'Construção de parcerias sólidas por meio de diagnósticos honestos e processos claros.',
+  },
+  {
+    title: 'Excelência no Atendimento',
+    text: 'Foco na eficiência, na pontualidade e na resolução definitiva das demandas de nossos clientes.',
   },
 ]
 
 export const services = [
   {
-    icon: 'Rat',
-    title: 'Desratização',
-    text: 'Controle e eliminação de roedores com métodos seguros para pessoas, pets e o meio ambiente.',
-  },
-  {
-    icon: 'Bug',
+    image: '/pragas/barata-cozinha.fw_.png',
     title: 'Desinsetização',
-    text: 'Combate a baratas, formigas, aranhas, escorpiões e demais insetos com produtos registrados no MS.',
+    subtitle: 'Controle de Insetos Rasteiros e Voadores',
+    text: 'Manejo integrado e eliminação de baratas, formigas, pulgas, carrapatos, mosquitos (vetores de dengue e outras doenças), moscas, percevejos, traças e escorpiões, utilizando metodologias de barreira química e gel inodoro de alta performance.',
   },
   {
-    icon: 'FlameKindling',
+    image: '/pragas/roedores.fw_.png',
+    title: 'Desratização',
+    subtitle: 'Controle de Roedores',
+    text: 'Implantação de sistemas de monitoramento e iscagem segura para o controle de camundongos, ratazanas e ratos de telhado, com foco na eliminação de focos e prevenção de zoonoses.',
+  },
+  {
+    image: '/pragas/cupim-madeira.fw_.png',
     title: 'Descupinização',
-    text: 'Tratamento preventivo e corretivo contra cupins de madeira seca e subterrâneos/solo, protegendo sua estrutura.',
+    subtitle: 'Controle de Cupins e Brocas',
+    text: 'Tratamento curativo e preventivo em estruturas de madeira e redes hidráulicas/elétricas, aplicando técnicas de injeção e barreira química profunda.',
   },
   {
     icon: 'Waves',
-    title: 'Limpeza de Caixa D\'Água e Resevatórios',
-    text: 'Remoção de sedimentos, lodo e impurezas, com desinfecção conforme normas sanitárias, garantindo água segura para consumo.',
+    title: 'Limpeza e Desinfecção',
+    subtitle: 'Reservatórios de Água',
+    text: 'Garantia de potabilidade e conformidade com as normas de saúde pública. Realizamos a higienização completa e a desinfecção bacteriológica de caixas d\'água e reservatórios.',
   },
 ]
 
@@ -122,8 +141,24 @@ export const faqs = [
 ]
 
 export const differentiators = [
-  { icon: 'ShieldCheck', title: 'Produtos registrados', text: 'Todos os produtos são registrados no Ministério da Saúde.' },
-  { icon: 'Users', title: 'Equipe qualificada', text: 'Profissionais treinados e equipamentos modernos.' },
-  { icon: 'Leaf', title: 'Compromisso ecológico', text: 'Ambiente mais seguro, limpo e ecológico para sua família e pets.' },
-  { icon: 'Clock', title: 'Agendamento flexível', text: 'Horários que se adaptam à sua rotina, sem burocracia.' },
+  {
+    icon: 'ShieldCheck',
+    title: 'Produtos Registrados',
+    text: 'Garantia de segurança e conformidade técnica. Todos os saneantes desinfestantes utilizados em nossas operações são estritamente registrados e homologados pelo Ministério da Saúde e ANVISA.',
+  },
+  {
+    icon: 'Users',
+    title: 'Equipe Qualificada',
+    text: 'Excelência na execução. Contamos com um corpo técnico altamente treinado, especializado no manejo integrado de pragas e equipado com tecnologias modernas para diagnósticos precisos.',
+  },
+  {
+    icon: 'Leaf',
+    title: 'Compromisso Ecológico',
+    text: 'Sustentabilidade aplicada. Desenvolvemos metodologias ecologicamente responsáveis, assegurando um ambiente limpo, seguro e biologicamente protegido para as pessoas e seus animais de estimação.',
+  },
+  {
+    icon: 'Clock',
+    title: 'Agendamento Flexível',
+    text: 'Atendimento personalizado e sem burocracia. Oferecemos soluções logísticas que se adaptam perfeitamente à rotina residencial ou ao cronograma operacional da sua empresa.',
+  },
 ]

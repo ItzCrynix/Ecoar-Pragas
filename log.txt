@@ -1,0 +1,107 @@
+----------------------------------------------------------------
+🚀 Thanks for using ftp-deploy. Let's deploy some stuff!   
+----------------------------------------------------------------
+If you found this project helpful, please support it
+by giving it a ⭐ on Github --> https://github.com/SamKirkland/FTP-Deploy-Action
+or add a badge 🏷️ to your projects readme --> https://github.com/SamKirkland/FTP-Deploy-Action#badge
+Using the following excludes filters: ["**/.git*","**/.git*/**","**/node_modules/**"]
+Creating local state at ./dist/.ftp-deploy-sync-state.json
+Local state created
+Connected to 177.12.170.33:21 (No encryption)
+< 220 ::ffff:177.12.170.33 FTP server ready
+> AUTH TLS
+< 234 AUTH TLS successful
+Control socket is using: TLSv1.3
+> OPTS UTF8 ON
+< 200 UTF8 set to on
+Login security: TLSv1.3
+> USER ***
+< 331 Password required for ***
+> PASS ###
+< 230 User *** logged in
+> FEAT
+< 550 FEAT: Operation not permitted
+> TYPE I
+< 200 Type set to I
+> STRU F
+< 200 Structure set to F
+> OPTS UTF8 ON
+< 200 UTF8 set to on
+> PBSZ 0
+< 200 PBSZ 0 successful
+> PROT P
+< 200 Protection set to Private
+  changing dir to ***
+> MKD www
+< 550 www: Permission denied
+> CWD www
+< 550 www: No such file or directory
+----------------------------------------------------------------
+No file exists on the server "***.ftp-deploy-sync-state.json" - this must be your first publish! 🎉
+The first publish will take a while... but once the initial sync is done only differences are published!
+If you get this message and its NOT your first publish, something is wrong.
+----------------------------------------------------------------
+Local Files:	31
+Server Files:	0
+----------------------------------------------------------------
+Calculating differences between client & server
+----------------------------------------------------------------
+📁 Create: assets
+📁 Create: certifications
+📁 Create: pragas
+📄 Upload: assets/index-CeQlBwc5.js
+📄 Upload: assets/index-qNlxtqSU.css
+📄 Upload: certifications/bombeiros.jpg
+📄 Upload: certifications/cetesb.jpg
+📄 Upload: certifications/crbio01.png
+📄 Upload: certifications/cvs.jpg
+📄 Upload: certifications/sivisa.jpg
+📄 Upload: certifications/vigilancia-sanitaria.jpg
+📄 Upload: coruja-ecoar-removebg-preview.png
+📄 Upload: coruja-ecoar.png
+📄 Upload: ecoar-logo.png
+📄 Upload: index.html
+📄 Upload: pragas/aranha.fw_-3.png
+📄 Upload: pragas/barata-cozinha.fw_.png
+📄 Upload: pragas/barata-esgoto.fw_.png
+📄 Upload: pragas/brocas-madeira.fw_.png
+📄 Upload: pragas/carrapato.fw_.png
+📄 Upload: pragas/cupim-madeira.fw_.png
+📄 Upload: pragas/cupim.fw_.png
+📄 Upload: pragas/escorpiao.fw_.png
+📄 Upload: pragas/formiga.fw_.png
+📄 Upload: pragas/mosca.fw_.png
+📄 Upload: pragas/mosquito.fw_.png
+📄 Upload: pragas/percevejos.fw_.png
+📄 Upload: pragas/pombos.fw_.png
+📄 Upload: pragas/pulgas.fw_.png
+📄 Upload: pragas/roedores.fw_.png
+📄 Upload: pragas/tracas.fw_.png
+----------------------------------------------------------------
+Making changes to 31 files/folders to sync server state
+Uploading: 1.07 MB -- Deleting: 0 B -- Replacing: 0 B
+----------------------------------------------------------------
+creating folder "assets/"
+  changing dir to assets
+> MKD assets
+< 550 assets: Permission denied
+> CWD assets
+< 550 assets: No such file or directory
+----------------------------------------------------------------
+--------------  🔥🔥🔥 an error occurred  🔥🔥🔥  --------------
+----------------------------------------------------------------
+----------------------------------------------------------------
+----------------------  full error below  ----------------------
+----------------------------------------------------------------
+FTPError: 550 assets: No such file or directory
+    at FTPContext._onControlSocketData (/home/runner/work/_actions/SamKirkland/FTP-Deploy-Action/v4.4.0/dist/index.js:5273:39)
+    at TLSSocket.<anonymous> (/home/runner/work/_actions/SamKirkland/FTP-Deploy-Action/v4.4.0/dist/index.js:5117:44)
+    at TLSSocket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+    at Readable.push (node:internal/streams/readable:394:5)
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:189:23) {
+  code: 550
+}
+> QUIT
+Error: FTPError: 550 assets: No such file or directory

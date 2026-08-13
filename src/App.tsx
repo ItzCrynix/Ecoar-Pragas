@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
+import WhyChooseUs from './components/WhyChooseUs'
 import Services from './components/Services'
 import Pests from './components/Pests'
 import Certifications from './components/Certifications'
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <WhyChooseUs />
         <Services />
         <Pests />
         <Certifications />

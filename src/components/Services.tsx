@@ -22,16 +22,35 @@ export default function Services() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2">
           {services.map((service, i) => {
-            const Icon = iconMap[service.icon]
+            const Icon = service.icon ? iconMap[service.icon as keyof typeof iconMap] : null
             return (
               <Reveal key={service.title} delay={(i % 3) * 0.08}>
                 <div className="group h-full rounded-2xl border border-white/10 bg-white/[0.04] p-8 transition-all hover:-translate-y-1 hover:border-brand-400/40 hover:bg-white/[0.07]">
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-500/20 text-brand-300 transition-colors group-hover:bg-accent-400 group-hover:text-brand-950">
-                    <Icon size={24} />
+                    {Icon ? (
+                      <Icon size={24} />
+                    ) : (
+                      <span
+                        className="h-6 w-6 bg-current"
+                        style={{
+                          WebkitMaskImage: `url(${service.image})`,
+                          maskImage: `url(${service.image})`,
+                          WebkitMaskSize: 'contain',
+                          maskSize: 'contain',
+                          WebkitMaskRepeat: 'no-repeat',
+                          maskRepeat: 'no-repeat',
+                          WebkitMaskPosition: 'center',
+                          maskPosition: 'center',
+                        }}
+                      />
+                    )}
                   </span>
                   <h3 className="mt-6 font-display text-xl font-bold text-white">{service.title}</h3>
+                  {service.subtitle && (
+                    <p className="mt-1 text-sm font-medium text-accent-300">{service.subtitle}</p>
+                  )}
                   <p className="mt-3 leading-relaxed text-brand-100/60">{service.text}</p>
                 </div>
               </Reveal>
